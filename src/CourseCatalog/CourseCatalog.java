@@ -5,7 +5,6 @@
  */
 package info5100.university.example.CourseCatalog;
 
-import info5100.university.example.Department.Department;
 import java.util.ArrayList;
 
 /**
@@ -13,12 +12,10 @@ import java.util.ArrayList;
  * @author kal bugrara
  */
 public class CourseCatalog {
-    Department department;
     String lastupdated;
     ArrayList<Course> courselist; 
-    public CourseCatalog(Department d){
+    public CourseCatalog(){
         courselist = new ArrayList();
-        department = d;
     }
     
     public ArrayList<Course> getCourseList(){

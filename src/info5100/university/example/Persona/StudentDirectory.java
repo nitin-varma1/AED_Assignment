@@ -5,7 +5,6 @@
  */
 package info5100.university.example.Persona;
 
-import info5100.university.example.Department.Department;
 import java.util.ArrayList;
 
 /**
@@ -14,12 +13,10 @@ import java.util.ArrayList;
  */
 public class StudentDirectory {
 
-    Department department;
     ArrayList<StudentProfile> studentlist;
 
-    public StudentDirectory(Department d) {
+    public StudentDirectory() {
 
-        department = d;
         studentlist = new ArrayList();
 
     }
