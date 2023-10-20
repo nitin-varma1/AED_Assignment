@@ -6,7 +6,6 @@
 package info5100.university.example.Persona.Faculty;
 
 import info5100.university.example.Persona.*;
-import info5100.university.example.Department.Department;
 import java.util.ArrayList;
 
 /**
@@ -15,12 +14,10 @@ import java.util.ArrayList;
  */
 public class UserAccountDirectory {
 
-    Department department;
     ArrayList<UserAccount> studentlist;
 
-    public UserAccountDirectory(Department d) {
+    public UserAccountDirectory() {
 
-        department = d;
         studentlist = new ArrayList();
 
     }

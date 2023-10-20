@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package info5100.university.example.Persona.Faculty;
 
 import info5100.university.example.Persona.*;
-import info5100.university.example.Department.Department;
+import info5100.university.example.Persona.Faculty.FacultyProfile;
 import java.util.ArrayList;
 
 /**
@@ -15,12 +14,10 @@ import java.util.ArrayList;
  */
 public class FacultyDirectory {
 
-    Department department;
     ArrayList<FacultyProfile> teacherlist;
 
-    public FacultyDirectory(Department d) {
+    public FacultyDirectory() {
 
-        department = d;
         teacherlist = new ArrayList();
 
     }

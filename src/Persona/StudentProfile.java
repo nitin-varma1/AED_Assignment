@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class StudentProfile {
 
     Person person;
+    String StudentID;
     Transcript transcript;
     EmploymentHistroy employmenthistory;
 
