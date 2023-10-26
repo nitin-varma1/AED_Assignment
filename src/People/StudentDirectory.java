@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package info5100.university.example.Persona;
+package People;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class StudentDirectory {
 
-    ArrayList<StudentProfile> studentlist;
+    ArrayList<Student> studentlist;
 
     public StudentDirectory() {
 
@@ -21,16 +21,16 @@ public class StudentDirectory {
 
     }
 
-    public StudentProfile newStudentProfile(Person p) {
+    public Student newStudentProfile(Person p) {
 
-        StudentProfile sp = new StudentProfile(p);
+        Student sp = new Student(p);
         studentlist.add(sp);
         return sp;
     }
 
-    public StudentProfile findStudent(String id) {
+    public Student findStudent(String id) {
 
-        for (StudentProfile sp : studentlist) {
+        for (Student sp : studentlist) {
 
             if (sp.isMatch(id)) {
                 return sp;

@@ -9,11 +9,21 @@ package info5100.university.example.Persona;
  *
  * @author kal bugrara
  */
-public class Address {
-    String line1;
-    String line2;
-    public Address(){
-        
+
+import People.Person;
+import info5100.university.example.workareas.Workarea;
+
+/**
+ *
+ * @author kal bugrara
+ */
+public class User {
+    Person person;
+    String UserID;
+    String Password;
+    
+    public User(Person p){
+        person = p;
     }
     
 }

@@ -5,8 +5,9 @@
  */
 package info5100.university.example.CourseSchedule;
 
+import Faculty.Professor;
 import info5100.university.example.CourseCatalog.Course;
-import info5100.university.example.Persona.Faculty.FacultyAssignment;
+import Faculty.ProfessorAssignment;
 import info5100.university.example.Persona.Faculty.FacultyProfile;
 import java.util.ArrayList;
 
@@ -18,19 +19,19 @@ public class CourseOffer {
 
     Course course;
     ArrayList<Seat> seatlist;
-    FacultyAssignment facultyassignment;
+    ProfessorAssignment facultyassignment;
 
     public CourseOffer(Course c) {
         course = c;
         seatlist = new ArrayList();
     }
      
-    public void AssignAsTeacher(FacultyProfile fp) {
+    public void AssignAsTeacher(Professor fp) {
 
-        facultyassignment = new FacultyAssignment(fp, this);
+        facultyassignment = new ProfessorAssignment(fp, this);
     }
 
-    public FacultyProfile getFacultyProfile() {
+    public Professor getFacultyProfile() {
         return facultyassignment.getFacultyProfile();
     }
 

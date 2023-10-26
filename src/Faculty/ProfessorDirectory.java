@@ -1,39 +1,40 @@
+package Faculty;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-import info5100.university.example.Persona.*;
-import info5100.university.example.Persona.Faculty.FacultyProfile;
+import People.Person;
 import java.util.ArrayList;
 
 /**
  *
  * @author kal bugrara
  */
-public class FacultyDirectory {
+public class ProfessorDirectory {
 
-    ArrayList<FacultyProfile> teacherlist;
+    ArrayList<Professor> teacherlist;
 
-    public FacultyDirectory() {
+    public ProfessorDirectory() {
 
         teacherlist = new ArrayList();
 
     }
 
-    public FacultyProfile newFacultyProfile(Person p) {
+    public Professor newFacultyProfile(Person p) {
 
-        FacultyProfile sp = new FacultyProfile(p);
+        Professor sp = new Professor(p);
         teacherlist.add(sp);
         return sp;
     }
     
-    public FacultyProfile getTopProfessor(){
+    public Professor getTopProfessor(){
         
         double bestratingsofar = 0.0;
-        FacultyProfile BestProfSofar = null;
-        for(FacultyProfile fp: teacherlist)
+        Professor BestProfSofar = null;
+        for(Professor fp: teacherlist)
            if(fp.getProfAverageOverallRating()>bestratingsofar){
            bestratingsofar = fp.getProfAverageOverallRating();
            BestProfSofar = fp;
@@ -42,9 +43,9 @@ public class FacultyDirectory {
         
     }
 
-    public FacultyProfile findTeachingFaculty(String id) {
+    public Professor findTeachingFaculty(String id) {
 
-        for (FacultyProfile sp : teacherlist) {
+        for (Professor sp : teacherlist) {
 
             if (sp.isMatch(id)) {
                 return sp;

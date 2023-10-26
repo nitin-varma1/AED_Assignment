@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package info5100.university.example.Persona.Faculty;
+package Faculty;
 
 import info5100.university.example.CourseSchedule.CourseOffer;
 
@@ -11,13 +11,13 @@ import info5100.university.example.CourseSchedule.CourseOffer;
  *
  * @author kal bugrara
  */
-public class FacultyAssignment {
+public class ProfessorAssignment {
     double tracerating;
     CourseOffer courseoffer;
-    FacultyProfile facultyprofile;
-    public FacultyAssignment(FacultyProfile fp, CourseOffer co){
+    Professor professor;
+    public ProfessorAssignment(Professor fp, CourseOffer co){
         courseoffer = co;
-        facultyprofile = fp;
+        professor = fp;
     }
 
        public double getRating(){
@@ -28,8 +28,8 @@ public class FacultyAssignment {
            
            tracerating = r;
        }
-    public FacultyProfile getFacultyProfile(){
-        return facultyprofile;
+    public Professor getFacultyProfile(){
+        return professor;
     }
     
 }

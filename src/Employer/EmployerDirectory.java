@@ -5,8 +5,6 @@
  */
 
 import info5100.university.example.Employer.EmployerProfile;
-import info5100.university.example.Persona.Faculty.*;
-import info5100.university.example.Persona.*;
 import java.util.ArrayList;
 
 /**

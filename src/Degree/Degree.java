@@ -7,7 +7,7 @@ package info5100.university.example.Degree;
 
 import info5100.university.example.CourseCatalog.Course;
 import info5100.university.example.CourseSchedule.SeatAssignment;
-import info5100.university.example.Persona.StudentProfile;
+import People.Student;
 import java.util.ArrayList;
 
 /**
@@ -36,7 +36,7 @@ public class Degree {
 
     }
 
-    public boolean isStudentReadyToGraduate(StudentProfile sp) {
+    public boolean isStudentReadyToGraduate(Student sp) {
 
         //Extract transcript from studentprofile
         //Extract the list of courses taken so far from the student transcript

@@ -5,6 +5,7 @@
  */
 package info5100.university.example.Persona;
 
+import People.Student;
 import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.SeatAssignment;
 import java.util.ArrayList;
@@ -16,12 +17,12 @@ import java.util.HashMap;
  */
 public class Transcript {
 
-    StudentProfile student;
+    Student student;
     HashMap<String, CourseLoad> courseloadlist;
 
     CourseLoad currentcourseload;
 
-    public Transcript(StudentProfile sp) {
+    public Transcript(Student sp) {
         student = sp;
         courseloadlist = new HashMap();
 

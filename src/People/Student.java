@@ -3,33 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package info5100.university.example.Persona;
+package People;
 
 import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.SeatAssignment;
-import info5100.university.example.Persona.EmploymentHistory.EmploymentHistroy;
+import info5100.university.example.Persona.Transcript;
 import java.util.ArrayList;
-
 /**
  *
  * @author kal bugrara
  */
-public class StudentProfile {
-
+public class Student{
     Person person;
     String StudentID;
     Transcript transcript;
-    EmploymentHistroy employmenthistory;
-
-    public StudentProfile(Person p) {
-
+    ArrayList<CourseOffer> currentCourses;
+    public Student(Person p) {
         person = p;
         transcript = new Transcript(this);
-        employmenthistory = new EmploymentHistroy();
-    }
-
-    public boolean isMatch(String id) {
-        return person.getPersonId().equals(id);
+        currentCourses = new ArrayList<CourseOffer>();
     }
 
     public Transcript getTranscript() {
@@ -55,5 +47,20 @@ public class StudentProfile {
 
         return transcript.getCourseList();
 
+    }
+    
+    public Boolean isMatch(String id){
+        if(StudentID.equals(id))
+            return true;
+        return false;
+    }
+    public boolean dropCourses(CourseOffer courseDrop){
+        for(CourseOffer cr: currentCourses){
+            if(cr==courseDrop){
+                currentCourses.remove(cr);
+                return true;
+            }
+        }
+        return false;
     }
 }
